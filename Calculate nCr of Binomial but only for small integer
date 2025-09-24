@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    int fac = 1;
+    
+    for(int i = 1; i <= n; i++) {
+        fac *= i;
+    }
+    
+    return fac;
+}
+
+int binomial(int a, int b) {
+    int N = factorial(a);
+    int R = factorial(b);
+    int NmR = factorial(a - b);
+    
+    return (N / (R * NmR));
+}
+
+int main() {
+    cout << binomial(9, 6);
+
+    return 0;
+}
