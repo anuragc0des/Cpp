@@ -16,5 +16,19 @@ int main() {
         cout << endl;
     }
 
+     // Square Pattern for Alphabet
+    char ch = 'A';
+
+    for (int i = 0; i < n; i++) {
+        
+        for(int j = 0; j < n; j++) {
+            char newCh = ch + j;
+            cout << newCh;
+        }
+        
+        cout << endl;
+    }
+
     return 0;
+
 }
