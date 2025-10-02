@@ -1,4 +1,4 @@
-// header files
+// CHECKING IF A NUMBER IS PRIME OR NOT
 #include <iostream>
 using namespace std;
 
@@ -20,6 +20,41 @@ int main() {
         cout << "Not Prime";
     }
     
+    
+    return 0;
+}
+
+
+
+// PRINTING PRIME NUMBER FROM 1 TO N
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int n = 10;
+    
+    for(int i = 1; i <= n; i++) {
+        bool isPrime = true;
+        
+        if(i <= 1) {
+            isPrime = false;
+        } else {
+            for(int j = 2; j * j <= i; j++) { 
+                if(i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        
+        
+        
+        if(isPrime) {
+            cout << i << endl;
+        }
+    }
     
     return 0;
 }
