@@ -1,0 +1,25 @@
+// header files
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 12;
+    bool isPrime = true; // initializing isPrime as true
+    
+    for(int i = 2; i * i <= n; i++) { // we have to use i * i <= n, this checks upto sqrt(n)
+        if(n % i == 0) {
+            isPrime = false; // if is remainder 0 -> isPrime will become false
+            break; // and we'll come out of the loop
+        } 
+    }
+
+    // just a condition to print prime string
+    if(isPrime) {
+        cout << "Prime";
+    } else {
+        cout << "Not Prime";
+    }
+    
+    
+    return 0;
+}
