@@ -1,0 +1,23 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+// Creating a function which converts decimal numbers to binary
+int decToBinary(int x) {
+    int binary = 0;
+    int power = 1;
+    
+    while(x > 0) {
+        int remainder = x % 2; // we get the remainder
+        x = x / 2; // we get a quotiant
+        binary += (remainder * power); // we add the remainder to binary by multiplying it by its power
+        power *= 10; // we update the power by 10 with every iteration
+    }
+    
+    return binary;
+}
+
+int main() {
+    cout << decToBinary(50);
+    return 0;
+}
